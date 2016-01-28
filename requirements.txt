@@ -1,0 +1,14 @@
+gevent==1.0.2
+greenlet==0.4.9
+msgpack-python==0.4.7
+Pillow==3.1.0
+protobuf==2.6.1
+pycrypto==2.6.1
+python-axolotl==0.1.7
+python-axolotl-curve25519==0.1
+python-dateutil==2.4.2
+pyzmq==15.2.0
+six==1.10.0
+wheel==0.26.0
+yowsup2==2.4.48
+zerorpc==0.5.2

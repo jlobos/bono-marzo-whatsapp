@@ -1,0 +1,29 @@
+{
+  "name": "bono-marzo-whatsapp",
+  "version": "0.0.1",
+  "description": "in developing...",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "update": "npm run update:pip",
+    "update:pip": "source python_modules/bin/activate && pip freeze --local | cut -d = -f 1  | xargs -n1 pip install -U && deactivate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jlobos27/bono-marzo-whatsapp.git"
+  },
+  "author": "@jlobos27",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlobos27/bono-marzo-whatsapp/issues"
+  },
+  "homepage": "https://github.com/jlobos27/bono-marzo-whatsapp#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "mongoose": "^4.3.7",
+    "python-shell": "^0.3.0",
+    "random-ua": "0.0.6",
+    "request": "^2.69.0",
+    "zerorpc": "^0.9.6"
+  }
+}
