@@ -12,11 +12,12 @@ var server = new zerorpc.Server({
     console.log('[ ✔✔ ] '.green + input);
 
     input = JSON.parse(input);
+    input.body = (input.body) ? input.body : 'media';
 
     beneficiary.consult(input.body, (err, res, body) => {
       if (err) {
-        db.reply(input.body, (err, res) => {
-          // console.log(err, res); // error y res, trabajar
+        // Obtener mensaje desde base de datos
+        db.reply(input, (res) => {
           reply(null, res.reply);
         });
       } else {
