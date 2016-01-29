@@ -12,6 +12,7 @@ var server = new zerorpc.Server({
     console.log('[ ✔✔ ] '.green + input);
 
     input = JSON.parse(input);
+    db.logs(input); // logs
     input.body = (input.body) ? input.body : 'media';
 
     beneficiary.consult(input.body, (err, res, body) => {
