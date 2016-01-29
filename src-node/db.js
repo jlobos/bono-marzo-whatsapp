@@ -7,6 +7,11 @@ var replies = mongoose.model(config.collection1, new Schema({
   input: Array
 }));
 
+var logs = mongoose.model(config.collection2, new Schema({
+  from: String,
+  data: Array
+}));
+
 function greetingDate() {
   if ([6,7,8,9,10,11].indexOf(new Date().getHours()) > -1) {
     return '\ud83c\udf1d Buenos días';
@@ -26,4 +31,15 @@ exports.reply = function(input, cb) {
       });
     } else { cb(res); }
   });
+}
+
+exports.logs = function(input) {
+  logs.findOneAndUpdate(
+    { from: input.from },
+    { $push: { 'data': (i => {delete i['from']; return i})(input) } },
+    { safe: true, upsert: true },
+    (err, res) => {
+      // console.log(err, res);
+    }
+  );
 }
