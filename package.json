@@ -20,10 +20,11 @@
   "homepage": "https://github.com/jlobos27/bono-marzo-whatsapp#readme",
   "dependencies": {
     "colors": "^1.1.2",
-    "mongoose": "^4.3.7",
+    "mongoose": "^4.4.0",
     "python-shell": "^0.3.0",
     "random-ua": "0.0.6",
     "request": "^2.69.0",
+    "striptags": "^2.1.1",
     "zerorpc": "^0.9.6"
   }
 }

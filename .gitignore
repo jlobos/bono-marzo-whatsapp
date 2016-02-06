@@ -1,7 +1,9 @@
 python_modules
 node_modules
+test
 
 src-python/config.py
 *.py[cod]
 config.json
-test
+
+npm-debug.log

@@ -1,4 +1,5 @@
 var PythonShell = require('python-shell');
+var striptags = require('striptags');
 var mongoose = require('mongoose');
 var zerorpc = require('zerorpc');
 var colors = require('colors');
@@ -22,8 +23,17 @@ var server = new zerorpc.Server({
           reply(null, res.reply);
         });
       } else {
+
+        body = JSON.parse(body);
+
+        if (body.status === 'success') {
+          reply(null, `${striptags(body.mensajes[0])} \u263a` );
+        } else {
+          reply(null, '\ud83d\ude23');
+        }
+
         // console.log(body); // trabajar json desde servidor
-        reply(null, body);
+        // editar README y script para respuestas en mongo
       }
     });
   }
