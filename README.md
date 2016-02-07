@@ -47,5 +47,5 @@ $ npm start
 
 ```bash
 $ ./python_modules/bin/yowsup-cli registration --requestcode sms --phone 569xxxxxxxx --cc 56 --mcc 730 --mnc 03
-$ ./python_modules/bin/yowsup-cli registration --register 524-456 --phone 569xxxxxxx --cc 56
+$ ./python_modules/bin/yowsup-cli registration --register xxx-xxx --phone 569xxxxxxx --cc 56
 ```
