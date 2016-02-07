@@ -27,13 +27,10 @@ var server = new zerorpc.Server({
         body = JSON.parse(body);
 
         if (body.status === 'success') {
-          reply(null, `${striptags(body.mensajes[0])} \u263a` );
+          reply(null, `${striptags(body.mensajes[0])} \n\u263a` );
         } else {
           reply(null, '\ud83d\ude23');
         }
-
-        // console.log(body); // trabajar json desde servidor
-        // editar README y script para respuestas en mongo
       }
     });
   }
