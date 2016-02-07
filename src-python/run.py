@@ -47,4 +47,7 @@ if __name__==  '__main__':
     stack.broadcastEvent(YowLayerEvent(YowNetworkLayer.EVENT_STATE_CONNECT))
 
     # this is the program mainloop
-    stack.loop()
+    try:
+        stack.loop()
+    except:
+        print('Error!!')
