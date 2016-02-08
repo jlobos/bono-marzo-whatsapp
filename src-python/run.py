@@ -4,6 +4,8 @@ from yowsup.layers.protocol_messages import YowMessagesProtocolLayer
 from yowsup.layers.protocol_receipts import YowReceiptProtocolLayer
 from yowsup.layers.protocol_acks import YowAckProtocolLayer
 from yowsup.layers.protocol_media import YowMediaProtocolLayer
+from yowsup.layers.protocol_iq import YowIqProtocolLayer
+from yowsup.layers.protocol_calls import YowCallsProtocolLayer
 from yowsup.layers.network import YowNetworkLayer
 from yowsup.layers.coder import YowCoderLayer
 from yowsup.stacks import YowStack, YOWSUP_CORE_LAYERS
@@ -29,7 +31,7 @@ if __name__==  '__main__':
 
     layers = (
         EchoLayer,
-        YowParallelLayer([YowAuthenticationProtocolLayer, YowMessagesProtocolLayer, YowReceiptProtocolLayer, YowAckProtocolLayer, YowMediaProtocolLayer]),
+        YowParallelLayer([YowAuthenticationProtocolLayer, YowMessagesProtocolLayer, YowReceiptProtocolLayer, YowAckProtocolLayer, YowMediaProtocolLayer, YowIqProtocolLayer, YowCallsProtocolLayer]),
         YowAxolotlLayer
     ) + YOWSUP_CORE_LAYERS
 
